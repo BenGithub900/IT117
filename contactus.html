@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<title>Bob Stop Cafe - Contact Us</title>
+<link rel="stylesheet" href="styles.css">
+
+<style>
+#c_form {
+    background-color: gray;
+    color: black;
+    border: 10px groove black;
+}
+
+input {
+    border: 10px groove white;
+    padding: 5px;
+    margin: 5px;
+}
+
+
+</style>
+
+<script>
+    function verifyPIN() {
+        var inputObject = document.getElementById('c_pinnumber');
+        if (inputObject.checkValidity() == false) {
+            document.getElementById("passcode").innerHTML = inputObject.validationMessage;
+        } else {
+            document.getElementById("passcode").innerHTML = "Passcode Valid";
+        }
+    }
+</script>
+
+</head>
+
+<body>
+
+    <header>
+        <img src="images/logo.gif" alt="Large circle filled with water and fish of different colors with a large letter B in the center." width="175" height="175">
+        <h1>Contact Us</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href='index.html'>Home Page</a></li>
+            <li><a href='aboutus.html'>About Us</a></li>
+            <li><a href='history.html'>History</a></li>
+            <li><a href='menu.html'>Menu</a></li>
+            <li><a href='contactus.html'>Contact Us</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <h2>Reach out to us here!</h2>
+        <form id="c_form" action="" method="post" autocomplete=”on”>
+            <label for="c_firstname">First Name</label><br>
+            <input type="text" id="c_firstname" name="c_firstname" required><br>
+
+            <label for="c_lastname">Last Name</label><br>
+            <input type="text" id="c_lastname" name="lname" required><br>
+
+            <label for="c_emailaddress">Email Address</label><br>
+            <input type="text" id="c_emailaddress" name="c_emailaddress" autocomplete="off" required><br>
+
+            <label for="c_pnumber">Phone Number</label><br>
+            <input type="text" id="c_pnumber" name="c_pnumber"><br>
+
+            <label for="c_notes">Notes</label><br>
+            <textarea name="c_notes" rows="5" cols="40" form="c_form"></textarea><br>
+
+            <!-- Passcode -->
+            <h2>Enter your four-digit passcode, then click Verify to check your input.</h2>
+            <label for="c_pinnumber">PIN Number</label><br>
+            <input id="c_pinnumber" type="number" min="1000" max="9999" name="c_pinnumber">
+
+            <p>Verify PIN Input</p>
+            <button onclick="verifyPIN()">Verify</button>
+            <p id="passcode"></p>
+
+            <!-- Radio --> 
+            <p>Favorite Seafood?</p>
+            <input type="radio" id="c_fish" name="c_fish" value="Fish">
+            <label for="c_fish">Fish</label><br>
+
+            <input type="radio" id="c_crab" name="c_crab" value="Crab">
+            <label for="c_crab">Crab</label><br>
+
+            <input type="radio" id="c_lobster" name="c_lobster" value="Lobster">
+            <label for="c_lobster">Lobster</label><br>
+
+            <!-- Checkbox -->
+            <p>Favorite tastes?</p>
+            <input type="checkbox" id="c_sweet" name="c_sweet" value="Bike">
+            <label for="c_sweet">Sweet</label><br>
+
+            <input type="checkbox" id="c_sour" name="c_sour" value="Sour">
+            <label for="c_sour">Sour</label><br>
+
+            <input type="checkbox" id="c_spicy" name="c_spicy" value="Spicy">
+            <label for="c_spicy">Spicy</label><br>
+
+            <!-- Drop menu -->
+            <label for="c_sharkdolphin">Sharks or Dolphins?</label><br>
+            <select name="c_sharkdolphin" id="c_sharkdolphin">
+                <option value="c_shark">Shark</option>
+                <option value="c_dolphin">Dolphin</option>
+            </select><br>
+
+            <input type="submit" value="Submit">
+            
+          </form>
+
+    </main>
+    
+    <footer></footer>
+
+</body>
+
+</html>
