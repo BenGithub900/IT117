@@ -67,7 +67,7 @@ nav ul li a:visited {
 	background-color: #ffffff;
 	text-decoration: none;
 	outline-style: solid;
-	outline-color: #00ff00;
+	outline-color: lightblue;
 }
 
 nav ul li a:hover {
@@ -96,4 +96,17 @@ table {
 .border {
 	border: 4px solid #00d9ff;
 	border-radius: 8px;
+}
+
+footer {
+	display: flex;
+}
+
+footer p {
+	margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+	background-color: white;
+	padding: 10px;
+	border: 4px outset black;
 }
